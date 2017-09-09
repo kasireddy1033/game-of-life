@@ -42,18 +42,18 @@ public class WhenYouCreateANewUniverse {
     	
     }
     
-    @Test
-    public void aUniverseSeededWithAGridContainingASingleLiveCellContentWillSpawnAnEmptyGrid() {
-
-        String seededGrid = "...\n" + ".*.\n" + "...\n";
-
-        String expectedGrid = "...\n" + "...\n" + "...\n";
-
-        Universe theUniverse = new Universe(seededWith(seededGrid));
-        theUniverse.spawnsANewGeneration();
-        String currentGrid = theUniverse.getGrid();
-        assertThat(currentGrid, is(expectedGrid));
-    }
+//    @Test
+//    public void aUniverseSeededWithAGridContainingASingleLiveCellContentWillSpawnAnEmptyGrid() {
+//
+//        String seededGrid = "...\n" + ".*.\n" + "...\n";
+//
+//        String expectedGrid = "...\n" + "...\n" + "...\n";
+//
+//        Universe theUniverse = new Universe(seededWith(seededGrid));
+//        theUniverse.spawnsANewGeneration();
+//        String currentGrid = theUniverse.getGrid();
+//        assertThat(currentGrid, is(expectedGrid));
+//    }
 
     @Test
     public void aUniverseSeededWithAGridWithLivingCellsContentWillContainThatGrid() {
@@ -65,18 +65,18 @@ public class WhenYouCreateANewUniverse {
         assertThat(currentGrid, is(seededGrid));
     }
 
-    @Test
-    public void aUniverseSpawnsANewGridInTheNextGeneration() {
-
-        String seededGrid = "...\n" + "***\n" + "...\n";
-
-        String expectedNextGeneration = ".*.\n" + ".*.\n" + ".*.\n";
-
-        Universe theUniverse = new Universe(seededWith(seededGrid));
-        theUniverse.createNextGeneration();
-        String currentGrid = theUniverse.getGrid();
-        assertThat(currentGrid, is(expectedNextGeneration));
-    }
+//    @Test
+//    public void aUniverseSpawnsANewGridInTheNextGeneration() {
+//
+//        String seededGrid = "...\n" + "***\n" + "...\n";
+//
+//        String expectedNextGeneration = ".*.\n" + ".*.\n" + ".*.\n";
+//
+//        Universe theUniverse = new Universe(seededWith(seededGrid));
+//        theUniverse.createNextGeneration();
+//        String currentGrid = theUniverse.getGrid();
+//        assertThat(currentGrid, is(expectedNextGeneration));
+//    }
 
     @Test
     public void aUserCanAssignALiveCellAtAGivenPointInTheGrid() {
@@ -138,6 +138,6 @@ public class WhenYouCreateANewUniverse {
         
         assertThat(theUniverse.getCells(), is(expectedCells));    
     }
-
-    
+//
+//    
 }
